@@ -4,7 +4,7 @@
 #
 Name     : libmemcached
 Version  : 1.0.18
-Release  : 6
+Release  : 7
 URL      : http://pkgs.fedoraproject.org/repo/pkgs/libmemcached/libmemcached-1.0.18-exhsieh.tar.gz/b4cd7ccfa1bca8b2563300342b9fd01f/libmemcached-1.0.18-exhsieh.tar.gz
 Source0  : http://pkgs.fedoraproject.org/repo/pkgs/libmemcached/libmemcached-1.0.18-exhsieh.tar.gz/b4cd7ccfa1bca8b2563300342b9fd01f/libmemcached-1.0.18-exhsieh.tar.gz
 Summary  : memcached C library and command line tools
