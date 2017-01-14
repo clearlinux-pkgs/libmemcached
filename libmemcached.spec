@@ -4,7 +4,7 @@
 #
 Name     : libmemcached
 Version  : 1.0.18
-Release  : 8
+Release  : 9
 URL      : http://pkgs.fedoraproject.org/repo/pkgs/libmemcached/libmemcached-1.0.18-exhsieh.tar.gz/b4cd7ccfa1bca8b2563300342b9fd01f/libmemcached-1.0.18-exhsieh.tar.gz
 Source0  : http://pkgs.fedoraproject.org/repo/pkgs/libmemcached/libmemcached-1.0.18-exhsieh.tar.gz/b4cd7ccfa1bca8b2563300342b9fd01f/libmemcached-1.0.18-exhsieh.tar.gz
 Summary  : memcached C library and command line tools
@@ -51,6 +51,7 @@ Summary: dev components for the libmemcached package.
 Group: Development
 Requires: libmemcached-lib
 Requires: libmemcached-bin
+Provides: libmemcached-devel
 
 %description dev
 dev components for the libmemcached package.
@@ -76,13 +77,24 @@ lib components for the libmemcached package.
 %setup -q -n libmemcached-1.0.18
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484422266
+export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
 %configure --disable-static
-make V=1 %{?_smp_mflags}
+make V=1  %{?_smp_mflags}
 
 %check
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
+make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
+export SOURCE_DATE_EPOCH=1484422266
 rm -rf %{buildroot}
 %make_install
 
@@ -189,8 +201,10 @@ rm -rf %{buildroot}
 /usr/include/libmemcachedutil-1.0/pool.h
 /usr/include/libmemcachedutil-1.0/util.h
 /usr/include/libmemcachedutil-1.0/version.h
-/usr/lib64/*.so
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/libhashkit.so
+/usr/lib64/libmemcached.so
+/usr/lib64/libmemcachedutil.so
+/usr/lib64/pkgconfig/libmemcached.pc
 /usr/share/aclocal/*.m4
 
 %files doc
@@ -200,4 +214,9 @@ rm -rf %{buildroot}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/*.so.*
+/usr/lib64/libhashkit.so.2
+/usr/lib64/libhashkit.so.2.0.0
+/usr/lib64/libmemcached.so.11
+/usr/lib64/libmemcached.so.11.0.0
+/usr/lib64/libmemcachedutil.so.2
+/usr/lib64/libmemcachedutil.so.2.0.0
