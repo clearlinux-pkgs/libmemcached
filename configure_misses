@@ -1,0 +1,46 @@
+Configure miss: debug
+Configure miss: vcs system
+Configure miss: vcs checkout
+Configure miss: assert
+Configure miss: libmemcachedprotocol
+Configure miss: whether gearmand executable path has been provided
+Configure miss: gearmand
+Configure miss: libgearman/gearman.h usability
+Configure miss: libgearman/gearman.h presence
+Configure miss: libgearman/gearman.h
+Configure miss: htonll
+Configure miss: dpkg-gensymbols
+Configure miss: wine
+Configure miss: rpmdev-setuptree
+Configure miss: whether memcached executable path has been provided
+Configure miss: whether sphinx-build executable path has been provided
+Configure miss: whether lcov executable path has been provided
+Configure miss: lcov
+Configure miss: whether genhtml executable path has been provided
+Configure miss: genhtml
+Configure miss: mach/mach.h
+Configure miss: ws2tcpip.h
+Configure miss: floor
+Configure miss: sqrt
+Configure miss: umem.h usability
+Configure miss: umem.h presence
+Configure miss: umem.h
+Configure miss: test for a working libevent
+Configure miss: atomic.h usability
+Configure miss: atomic.h presence
+Configure miss: atomic.h
+Configure miss: setppriv
+Configure miss: assert
+Configure miss: MINGW... checking whether __MINGW32__ is declared
+Configure miss: if all warnings into errors
+Configure miss: whether the linker accepts -z
+Configure miss: whether the linker accepts relro
+Configure miss: whether the linker accepts now
+Configure miss: whether C compiler accepts -Weverything
+Configure miss: whether C compiler accepts -Wthis-test-should-fail
+Configure miss: whether C compiler accepts -Wshorten-64-to-32
+Configure miss: whether C compiler accepts -fmudflapt
+Configure miss: whether C++ compiler accepts -Weverything
+Configure miss: whether C++ compiler accepts -Wthis-test-should-fail
+Configure miss: whether C++ compiler accepts -Wshorten-64-to-32
+Configure miss: whether C++ compiler accepts -fmudflapt

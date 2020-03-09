@@ -1,0 +1,7 @@
+1.0.18
+bison
+cyrus-sasl-dev
+flex
+mariadb-dev
+util-linux-dev
+valgrind
