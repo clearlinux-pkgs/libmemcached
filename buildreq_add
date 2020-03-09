@@ -3,5 +3,4 @@
 bison
 flex
 valgrind
-mariadb-dev
 util-linux-dev

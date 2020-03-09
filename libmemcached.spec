@@ -4,7 +4,7 @@
 #
 Name     : libmemcached
 Version  : 1.0.18
-Release  : 12
+Release  : 13
 URL      : https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
 Source0  : https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
 Summary  : memcached C library and command line tools
@@ -15,9 +15,7 @@ Requires: libmemcached-lib = %{version}-%{release}
 Requires: libmemcached-license = %{version}-%{release}
 Requires: libmemcached-man = %{version}-%{release}
 BuildRequires : bison
-BuildRequires : cyrus-sasl-dev
 BuildRequires : flex
-BuildRequires : mariadb-dev
 BuildRequires : sed
 BuildRequires : util-linux-dev
 BuildRequires : valgrind
@@ -97,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583788463
+export SOURCE_DATE_EPOCH=1583789223
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -117,7 +115,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1583788463
+export SOURCE_DATE_EPOCH=1583789223
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libmemcached
 cp %{_builddir}/libmemcached-1.0.18/COPYING %{buildroot}/usr/share/package-licenses/libmemcached/f18145fc8673eee689e685c226baa431f9b32eb9

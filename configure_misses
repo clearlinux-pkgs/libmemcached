@@ -3,6 +3,9 @@ Configure miss: vcs system
 Configure miss: vcs checkout
 Configure miss: assert
 Configure miss: libmemcachedprotocol
+Configure miss: mysqld
+Configure miss: mysql_config
+Configure miss: mysql_config5
 Configure miss: whether gearmand executable path has been provided
 Configure miss: gearmand
 Configure miss: libgearman/gearman.h usability
@@ -30,6 +33,9 @@ Configure miss: atomic.h usability
 Configure miss: atomic.h presence
 Configure miss: atomic.h
 Configure miss: setppriv
+Configure miss: sasl/sasl.h usability
+Configure miss: sasl/sasl.h presence
+Configure miss: sasl/sasl.h
 Configure miss: assert
 Configure miss: MINGW... checking whether __MINGW32__ is declared
 Configure miss: if all warnings into errors
